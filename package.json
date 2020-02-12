@@ -8,6 +8,7 @@
     "test/watch": "jest --watch",
     "start": "start-storybook",
     "dev": "start-storybook",
+    "deploy:gitpage": "storybook-to-ghpages -o storybook",
     "build:ts": "tsc",
     "build": "rm -rf lib && npm run build:ts && cp -r src/wangeditor lib/",
     "release": "npm run test && npm run build && hi-pkg-scripts release"
@@ -20,7 +21,11 @@
     "lib/**",
     "styles/**"
   ],
-  "keywords": ["rich-editor", "editor", "react"],
+  "keywords": [
+    "rich-editor",
+    "editor",
+    "react"
+  ],
   "author": "",
   "license": "MIT",
   "peerDependencies": {
@@ -33,6 +38,7 @@
     "@storybook/addon-storysource": "^5.3.13",
     "@storybook/preset-create-react-app": "^1.5.2",
     "@storybook/react": "^5.3.13",
+    "@storybook/storybook-deployer": "^2.8.1",
     "@types/classnames": "^2.2.9",
     "@types/enzyme": "^3.10.3",
     "@types/enzyme-adapter-react-16": "^1.0.5",
