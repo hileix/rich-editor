@@ -34,4 +34,4 @@ export default App;
 
 ## 文档
 
-[文档](https://:hifeteam.github.io/rich-editor/)
+[文档](https://hifeteam.github.io/rich-editor/)
