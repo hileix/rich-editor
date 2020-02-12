@@ -11,7 +11,7 @@
     "deploy:gitpage": "storybook-to-ghpages -o storybook",
     "build:ts": "tsc",
     "build": "rm -rf lib && npm run build:ts && cp -r src/wangeditor lib/",
-    "release": "npm run test && npm run build && hi-pkg-scripts release"
+    "release": "npm run build && hi-pkg-scripts release"
   },
   "repository": {
     "type": "git",
