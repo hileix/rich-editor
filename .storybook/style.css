@@ -1,0 +1,8 @@
+/* README.md 中 table 的样式 */
+.readme-table {
+  border-collapse: collapse;
+}
+
+.readme-table th ,.readme-table td {
+  border: 1px solid #e5e5e5;
+}

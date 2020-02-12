@@ -1,0 +1,68 @@
+{
+  "name": "@hife/rich-editor",
+  "version": "0.1.0",
+  "description": "基于 React 的富文本编辑器",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "test/watch": "jest --watch",
+    "start": "start-storybook",
+    "dev": "start-storybook",
+    "build:ts": "tsc",
+    "build": "rm -rf lib && npm run build:ts && cp -r src/wangeditor lib/",
+    "release": "npm run test && npm run build && hi-pkg-scripts release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hifeteam/rich-editor.git"
+  },
+  "files": [
+    "lib/**",
+    "styles/**"
+  ],
+  "keywords": ["rich-editor", "editor", "react"],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.4.0",
+    "react-dom": ">=16.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@storybook/addon-info": "^5.3.13",
+    "@storybook/addon-storysource": "^5.3.13",
+    "@storybook/preset-create-react-app": "^1.5.2",
+    "@storybook/react": "^5.3.13",
+    "@types/classnames": "^2.2.9",
+    "@types/enzyme": "^3.10.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^24.0.23",
+    "@types/lodash": "^4.14.149",
+    "@types/react-dom": "^16.9.3",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.4.3",
+    "hi-pkg-scripts": "^0.6.0",
+    "jest": "^24.2.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-scripts": "^3.3.1",
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2"
+  },
+  "hi-pkg-scripts": {
+    "release": {
+      "generateChangelog": true
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}

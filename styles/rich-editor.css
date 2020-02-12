@@ -1,0 +1,13 @@
+.hife-rich-editor__max {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: #a0a0a0;
+}
+
+.hife-rich-editor__max--disabled {
+  color: #ff4444;
+}
