@@ -1,6 +1,6 @@
 {
   "name": "@hife/rich-editor",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "基于 React 的富文本编辑器",
   "main": "lib/index.js",
   "scripts": {
