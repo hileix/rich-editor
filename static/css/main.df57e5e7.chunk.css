@@ -1,0 +1,24 @@
+/* README.md 中 table 的样式 */
+.readme-table {
+  border-collapse: collapse;
+}
+
+.readme-table th ,.readme-table td {
+  border: 1px solid #e5e5e5;
+}
+.hife-rich-editor__max {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: #a0a0a0;
+}
+
+.hife-rich-editor__max--disabled {
+  color: #ff4444;
+}
+
+
+/*# sourceMappingURL=main.df57e5e7.chunk.css.map*/
