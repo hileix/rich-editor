@@ -233,13 +233,15 @@ class RichEditor extends React.Component<RichEditorProps, RichEditorState> {
 
     defaultValue && this.editor.txt.html(defaultValue);
 
+    this.forceUpdate();
+
     /**
      * 原因是点击事件由mousedown,mouseup都在元素内时触发，但若第一次鼠标抬起时在元素外，认为没有触发点击事件，点击事件会开始onchange，我们改第一次down为人为触发click即可
-     * 
+     *
      * https://github.com/wangfupeng1988/wangEditor/issues/1749#issuecomment-433587597
      */
     setTimeout(() => {
-      this.richEditorBox.click()
+      this.richEditorBox.click();
     }, 10);
   };
 
