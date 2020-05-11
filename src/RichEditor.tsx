@@ -241,7 +241,9 @@ class RichEditor extends React.Component<RichEditorProps, RichEditorState> {
      * https://github.com/wangfupeng1988/wangEditor/issues/1749#issuecomment-433587597
      */
     setTimeout(() => {
-      this.richEditorBox.click();
+      this.richEditorBox &&
+        this.richEditorBox.click &&
+        this.richEditorBox.click();
     }, 10);
   };
 
