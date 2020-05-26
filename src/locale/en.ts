@@ -1,4 +1,4 @@
-{
+export default {
   "title": "Set title",
   "font": "Font color",
   "online": "Online image",
@@ -9,4 +9,4 @@
   "linkWord": "Link text",
   "deleteLink": "Delete this link",
   "imageSizeLimitTip": "The size is greater than 5.24 M"
-}
+};

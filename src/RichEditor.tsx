@@ -176,7 +176,7 @@ class RichEditor extends React.Component<RichEditorProps, RichEditorState> {
     if (lang.includes('ja')) {
       return ja;
     }
-    if (lang.includes('mx')) {
+    if (lang.includes('es')) {
       return mx;
     }
     return en;

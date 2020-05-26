@@ -1,4 +1,4 @@
-{
+export default {
   "title": "设置标题",
   "font": "字体颜色",
   "online": "网页图片",
@@ -9,4 +9,4 @@
   "linkWord": "链接文字",
   "deleteLink": "删除此链接",
   "imageSizeLimitTip": "图片尺寸超过5.24M"
-}
+};
