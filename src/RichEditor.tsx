@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { isMobile } from './utils';
+import locale from './locale';
 
 export interface RichEditorProps {
   /**
@@ -63,6 +64,10 @@ export interface RichEditorProps {
     link: string;
   };
   /**
+   * 语言
+   */
+  lang: string;
+  /**
    * 自定义上传图片函数
    * 上传完图片后需要调用 insert() 函数，并且将后端返回的图片地址作为 insert() 的第一个参数传入
    */
@@ -121,15 +126,15 @@ class RichEditor extends React.Component<RichEditorProps, RichEditorState> {
     menuStyle: {},
     boxStyle: {},
     texts: {
-      deleteLink: '删除链接',
-      title: '设置标题',
-      font: '文字颜色',
-      online: '网络图片',
-      upload: '上传图片',
-      linkPic: '图片链接',
-      linkWord: '链接文字',
-      insert: '插入',
-      link: '链接'
+      deleteLink: 'Delete this link',
+      title: 'Set title',
+      font: 'Font color',
+      online: 'Online image',
+      upload: 'Upload image',
+      linkPic: 'Image link',
+      linkWord: 'Link text',
+      insert: 'Insert',
+      link: 'Link'
     }
   };
 
@@ -157,6 +162,26 @@ class RichEditor extends React.Component<RichEditorProps, RichEditorState> {
     );
   }
 
+  getTexts = (lang: string) => {
+    const { zh, en, ja, mx, zh_TW } = locale;
+    if (lang === 'zh') {
+      return zh;
+    }
+    if (lang.includes('zh_')) {
+      return zh_TW;
+    }
+    if (lang.includes('en')) {
+      return en;
+    }
+    if (lang.includes('ja')) {
+      return ja;
+    }
+    if (lang.includes('mx')) {
+      return mx;
+    }
+    return en;
+  }
+
   _richEditorCreater = (
     RichEditor: any,
     menuDOM: HTMLDivElement,
@@ -167,10 +192,10 @@ class RichEditor extends React.Component<RichEditorProps, RichEditorState> {
       onBlur,
       uploadImgMaxLength,
       zIndex,
-      texts,
       customUploadImg,
       onImageTypeError,
-      onUploadImageError
+      onUploadImageError,
+      lang = 'en'
     } = this.props;
 
     const { defaultValue } = this.state;
@@ -190,6 +215,8 @@ class RichEditor extends React.Component<RichEditorProps, RichEditorState> {
       'image',
       'hr'
     ];
+    
+    const texts = this.getTexts(lang);
 
     this.editor.customConfig.lang = {
       删除链接: texts.deleteLink,
