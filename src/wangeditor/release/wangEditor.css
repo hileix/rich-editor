@@ -399,6 +399,7 @@
 }
 .w-e-text img {
   cursor: pointer;
+  max-width: 100%;
 }
 .w-e-text img:hover {
   box-shadow: 0 0 5px #333;
