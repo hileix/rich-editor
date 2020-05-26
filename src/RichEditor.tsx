@@ -66,7 +66,7 @@ export interface RichEditorProps {
   /**
    * 语言
    */
-  lang: string;
+  lang?: string;
   /**
    * 自定义上传图片函数
    * 上传完图片后需要调用 insert() 函数，并且将后端返回的图片地址作为 insert() 的第一个参数传入
@@ -215,7 +215,7 @@ class RichEditor extends React.Component<RichEditorProps, RichEditorState> {
       'image',
       'hr'
     ];
-    
+
     const texts = this.getTexts(lang);
 
     this.editor.customConfig.lang = {
