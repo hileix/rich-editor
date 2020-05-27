@@ -11,3 +11,7 @@
 .hife-rich-editor__max--disabled {
   color: #ff4444;
 }
+
+.w-e-text img {
+  max-width: 100%;
+}
